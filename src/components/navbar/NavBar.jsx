@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import logo from "../../../public/logo.png";
-
 function NavBar() {
   const [scrollColor, setScrollColor] = useState(false);
 
@@ -30,26 +30,76 @@ function NavBar() {
       }
     >
       <Container className="d-md-flex justify-content-between align-items-center">
-        <Navbar.Brand href="#home">
+        <NavLink to="/">
           <img src={logo} alt="logo" className="w-75" />
-        </Navbar.Brand>
+        </NavLink>
         <div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className=" ">
-              <Nav.Link href="#features" className="whiteText">
-                Features
+              <Nav.Link>
+                <NavLink
+                  to="/home"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  {" "}
+                  Home
+                </NavLink>
               </Nav.Link>
-              <Nav.Link href="#pricing" className="whiteText">
-                Pricing
+              <Nav.Link>
+                <NavLink
+                  to="/courses"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  {" "}
+                  Courses
+                </NavLink>
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets" className="whiteText">
-                More deets
+              <Nav.Link>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  Services
+                </NavLink>
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes" className="whiteText">
-                Dank memes
+              <Nav.Link>
+                <NavLink
+                  to="/portfolio"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  Portfolio
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  Contact
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "orangeText" : "whiteText"
+                  }
+                >
+                  About
+                </NavLink>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

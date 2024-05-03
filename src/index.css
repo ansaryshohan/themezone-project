@@ -5,7 +5,14 @@
 
 }
 .whiteText{
-  color: White !important;
+  color: White;
+  text-decoration: none;
+  font-weight: 700;
+}
+.orangeText{
+  color: orangered;
+  text-decoration: none;
+  font-weight: 700;
 }
 .blueText{
   color:#0073E7;

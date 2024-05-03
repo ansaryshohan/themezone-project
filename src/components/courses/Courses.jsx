@@ -7,7 +7,32 @@ import course3 from "../../../public/course3.jpg"
 import course4 from "../../../public/course4.jpg"
 import SingleCourseCard from './SingleCourseCard';
 
-const coursesDetails = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const coursesDetails = [
+  {
+    image: course1,
+    title: "Web Development",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nisi cumque aliquam reiciendis atque numquam?",
+  },
+  {
+    image: course2,
+    title: "Digital Marketing",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nisi cumque aliquam reiciendis atque numquam?",
+  },
+  {
+    image: course3,
+    title: "Graphics Design",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nisi cumque aliquam reiciendis atque numquam?",
+  },
+  {
+    image: course4,
+    title: "Social Media Marketing",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nisi cumque aliquam reiciendis atque numquam?",
+  },
   {
     image: course1,
     title: "Web Development",
@@ -42,7 +67,7 @@ class Courses extends Component {
         <Container>
         <Row xs={1} md={2} className="g-4">
           {
-            coursesDetails.map((singleCourse,index)=><SingleCourseCard key={index} singleCourse={singleCourse}/>)
+            coursesDetails.slice(0,4).map((singleCourse,index)=><SingleCourseCard key={index} singleCourse={singleCourse}/>)
           }
         </Row>
         </Container>

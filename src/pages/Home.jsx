@@ -1,5 +1,5 @@
 import  { Component } from 'react';
-import NavBar from '../components/navbar/NavBar';
+// import NavBar from '../components/navbar/NavBar';
 import Hero from '../components/hero/Hero';
 import Services from '../components/service/Services';
 import TechChart from '../components/techChart/TechChart';
@@ -8,13 +8,13 @@ import Projects from '../components/projects/Projects';
 import Courses from '../components/courses/Courses';
 import VideoSection from '../components/videoSection/VideoSection';
 import ReviewSlider from '../components/ReviewSlider/ReviewSlider';
-import Footer from '../components/Footer/Footer';
+// import Footer from '../components/Footer/Footer';
 
 class Home extends Component {
   render() {
     return (
       <>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Hero/>
         <Services/>
         <TechChart/>
@@ -23,8 +23,8 @@ class Home extends Component {
         <Courses/>
         <VideoSection/>
         <ReviewSlider/>
-        <Footer/>
-        <div className='endDiv'></div>
+        {/* <Footer/> */}
+       
       </>
     );
   }
